@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-parse-app
+spec:
+  replicas: 1 # number of running pods
+  template:
+    metadata:
+      labels:
+        name: my-parse-app
+        app: my-parse-app
+        tier: backend
+        role: application-server
+    spec:
+      containers:
+      - env:
+        - name: PARSE_SERVER_APPLICATION_ID
+          value: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak
+        - name: PARSE_SERVER_DATABASE_URI
+          value: mongodb://mongo/test
+        - name: PARSE_SERVER_MASTER_KEY
+          value: nxANckeVBWZngactCM4mL6iJnOZMU21ORxn538Qa
+        image: hrsikesa/parse-server
+        name: my-parse-app     
+        ports:
+        - containerPort: 1337       
+        resources: {}
+      restartPolicy: Always
+status: {}
