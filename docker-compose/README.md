@@ -27,7 +27,7 @@ Now our Parse Server is up and running
 
    To Retrive added data from Parse Server -  Run below command on Host were Parse Server is running
       ```bash   
-      curl -X GET -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" http://localhost:1337/parse/classes       /GameScore
+      curl -X GET -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" http://localhost:1337/parse/classes/GameScore
       ```    
    Will recive this Response -  Will show all the added data
 
