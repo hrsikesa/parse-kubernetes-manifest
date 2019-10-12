@@ -8,7 +8,8 @@
 
       Perquisites - Kubernetes Cluster, Docker Image on Docker Hub 
 
-      1. Inside a Directory create these YAML files  - [mongo-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-service.yml) , [mongo-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-deployment.yml), [parse-server-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-service.yml), [parse-server-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-deployment.yml), [mongo-persistent-storage-persistentvolumeclaim.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-persistent-storage-persistentvolumeclaim.yml )
+      1. Inside a Directory create these YAML files  - 
+      [mongo-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-service.yml) , [mongo-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-deployment.yml), [parse-server-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-service.yml), [parse-server-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-deployment.yml), [mongo-persistent-storage-persistentvolumeclaim.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-persistent-storage-persistentvolumeclaim.yml )
 
       2. Now inside same directory where we have created YAML file run below commands to deploy Parse Server
           ```bash
