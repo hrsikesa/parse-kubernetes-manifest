@@ -28,18 +28,18 @@
       4. Verify Parse Server Deploying by adding and retrieving data from Parse Server - 
 
           a) To add data in Parse Server -
-             ```bash
-             curl -X POST -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" -H "Content-Type: application/json" -d '{"score":839,"playerName":"ATLAN","cheatMode":false}' http://35.188.66.94:1337/parse/classes/GameScore
-             ```
+             
+             #curl -X POST -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" -H "Content-Type: application/json" -d '{"score":839,"playerName":"ATLAN","cheatMode":false}' http://35.188.66.94:1337/parse/classes/GameScore
+            
 
              Will recive this response -
                '{"objectId":"gonL8NSOh7","createdAt":"2019-10-12T03:14:36.275Z"}'
 
 
           b) To Retrive added data -
-            ```bash
-             curl -X GET -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" http://35.188.66.94:1337/parse/classes/GameScore
-             ```
+            
+             #curl -X GET -H "X-Parse-Application-Id: TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak" http://35.188.66.94:1337/parse/classes/GameScore
+             
 
              Will recive this response -
                '{"results":[{"objectId":"gonL8NSOh7","score":839,"playerName":"ATLAN","cheatMode":false,"createdAt":"2019-10-12T03:14:36.275Z","updatedAt":"2019-10-12T03:14:36.275Z"}]}'
