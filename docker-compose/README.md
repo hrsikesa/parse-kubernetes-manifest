@@ -6,7 +6,7 @@ Here we are using Docker Compose to deploy Parse Server
 
 Docker & docker-compose installed on Host
 
-##S teps - 
+## Steps - 
 
 1. Create docker-compose.yaml file [docker-compose.yml](https://github.com/hrsikesa/parse-server/blob/master/docker-compose/docker-compose.yml)
 2. In the directory where docker-compose.yaml file is present run below command 
