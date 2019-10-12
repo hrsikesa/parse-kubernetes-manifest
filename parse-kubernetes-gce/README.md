@@ -8,27 +8,22 @@
 
       Perquisites - Kubernetes Cluster, Docker Image on Docker Hub 
 
-      1. Inside a Directory create these YAML files  - 
-      [mongo-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-service.yml) , [mongo-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-deployment.yml), [parse-server-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-service.yml), [parse-server-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-deployment.yml), [mongo-persistent-storage-persistentvolumeclaim.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-persistent-storage-persistentvolumeclaim.yml )
-
-      2. Now inside same directory where we have created YAML file run below commands to deploy Parse Server
-          ```bash
-          kubectl create -f mongo-service.yml
-          ```
-          ```bash
-          kubectl create -f mongo-deployment.yml
-          ```
-          ```bash
-          kubectl create -f parse-server-service.yml
-          ```
-          ```bash
-          kubectl create -f parse-server-deployment.yml
-          ```
-          ```bash
-          kubectl create -f mongo-persistent-storage-persistentvolumeclaim.yml
-          ```
-
-      3. Now go to Service in GUI to access parse-server from External IP or check by #kubectl get svc (see External IP & Port of my-parse-app-service)
+     1. Inside a Directory create these YAML files  - 
+   [mongo-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-service.yml),, [mongo-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-deployment.yml), [parse-server-service.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-service.yml), [parse-server-deployment.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/parse-server-deployment.yml), [mongo-persistent-storage-persistentvolumeclaim.yml](https://github.com/hrsikesa/parse-server/blob/master/parse-kubernetes-gce/mongo-persistent-storage-persistentvolumeclaim.yml )
+   
+    2. Now inside same directory where we have created YAML file run below commands to deploy Parse Server
+        
+          #kubectl create -f mongo-service.yml
+          
+          #kubectl create -f mongo-deployment.yml
+          
+          #kubectl create -f parse-server-service.yml
+          
+          #kubectl create -f parse-server-deployment.yml
+          
+          #kubectl create -f mongo-persistent-storage-persistentvolumeclaim.yml
+          
+      3. Now go to Service in GUI to access parse-server from External IP or check by #kubectl get svc (see External IP & Port   of my-parse-app-service)
 
       4. Verify Parse Server Deploying by adding and retrieving data from Parse Server - 
 
