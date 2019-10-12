@@ -43,3 +43,15 @@
 
              Will recive this response -
                '{"results":[{"objectId":"gonL8NSOh7","score":839,"playerName":"ATLAN","cheatMode":false,"createdAt":"2019-10-12T03:14:36.275Z","updatedAt":"2019-10-12T03:14:36.275Z"}]}'
+               
+
+## Parse Server with Kompose on Kubernetes -
+[Kompose](http://kompose.io/) is a tool to help users who are familiar with docker-compose move to Kubernetes.
+Kompose deploy application on Kubernetes using docker-compose.yml file
+
+Perquisites - Kubernetes Cluster , [Kompose on Host](https://github.com/kubernetes/kompose) from where we will connect to our Kubernetes Cluster 
+####  Steps  to follow 
+1. Go to directory where  docker-compose.yml file is present and run below command. Now Kompose will automatically create Services, Deployments on Kubernetes  
+   #kompose up 
+
+   Now our Parse Server is up and running 
