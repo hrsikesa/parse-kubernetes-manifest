@@ -51,10 +51,16 @@ Kompose deploy application on Kubernetes using docker-compose.yml file
 
 Perquisites - Kubernetes Cluster , [Kompose on Host](https://github.com/kubernetes/kompose) from where we will connect to our Kubernetes Cluster 
 ####  Steps  to follow 
-1. Go to directory where  docker-compose.yml file is present and run below command. Now Kompose will automatically create Services, Deployments on Kubernetes  
-   #kompose up 
+1. Install Kompose on Host from where we will be connecting to our Cluster
+           
+       # curl -L https://github.com/kubernetes/kompose/releases/download/v1.18.0/kompose-linux-amd64 -o kompose
+       # chmod +x kompose
+       # sudo mv ./kompose /usr/local/bin/kompose
+3. Go to directory where  docker-compose.yml file is present and run below command. Now Kompose will automatically create Services, Deployments on Kubernetes  
+                     
+       # kompose up 
 
-   Now our Parse Server is up and running 
+   Now our Parse Server is up and running
    
    
 ## Parse Server with Helm Chart -
