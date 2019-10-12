@@ -22,7 +22,8 @@ Now our Parse Server is up and running
       ```
       
     
-   Will recive this response - '{"objectId":"TGFljGptGS","createdAt":"2019-10-10T02:43:37.738Z"}'
+   Will recive this response - 
+   '{"objectId":"TGFljGptGS","createdAt":"2019-10-10T02:43:37.738Z"}'
     
 
    To Retrive added data from Parse Server -  Run below command on Host were Parse Server is running
