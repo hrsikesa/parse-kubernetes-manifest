@@ -1,0 +1,36 @@
+version: '3'
+services:
+
+    mongo:
+        image: mongo
+        ports:
+            - 27017:27017
+        volumes:
+            - data-db:/data/db
+
+    parse:
+        image: hrsikesa/parse-server
+        ports:
+            - 1337:1337
+        links:
+            - mongo
+        environment:
+            - PARSE_SERVER_APPLICATION_ID=TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak
+            - PARSE_SERVER_MASTER_KEY=nxANckeVBWZngactCM4mL6iJnOZMU21ORxn538Qa
+            - PARSE_SERVER_DATABASE_URI=mongodb://mongo/test
+
+    dashboard:
+        image: parseplatform/parse-dashboard
+        ports:
+            - 4040:4040
+        environment:
+            - PARSE_DASHBOARD_SERVER_URL=http://localhost:1337/parse
+            - PARSE_DASHBOARD_APP_ID=TUA9UzkoEqYadwpnPRd9PNok8SP2RXeTrnAhS4Ak
+            - PARSE_DASHBOARD_MASTER_KEY=nxANckeVBWZngactCM4mL6iJnOZMU21ORxn538Qa
+            - PARSE_DASHBOARD_APP_NAME=rishi
+            - PARSE_DASHBOARD_ALLOW_INSECURE_HTTP=1
+            - PARSE_DASHBOARD_USER_ID=user
+            - PARSE_DASHBOARD_USER_PASSWORD=pass
+volumes:
+  data-db:
+
