@@ -55,3 +55,51 @@ Perquisites - Kubernetes Cluster , [Kompose on Host](https://github.com/kubernet
    #kompose up 
 
    Now our Parse Server is up and running 
+   
+   
+## Parse Server with Helm Chart -
+
+ Perquisites - Kubernetes Cluster
+
+ 1. Install Helm on Host from where we will be connecting to our Cluster
+    
+        # curl https://raw.githubusercontent.com/kubernetes/helm/master /scripts/get > get_helm.sh
+        # chmod 700 get_helm.sh
+        #  ./get_helm.sh 
+
+ 2. Install Helm’s server-side counterpart Tiller, 
+     
+         # helm init 
+
+    To verify Tiller installation run below command by checking the output of kubectl get pods 
+    
+         # kubectl --namespace kube-system get pods | grep tiller    
+
+  3. Install Parse Server on Kubernetes Cluster 
+            
+          #kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default
+     clusterrolebinding.rbac.authorization.k8s.io/add-on-cluster-admin created
+           
+          #helm list
+          #helm install stable/parse
+
+  4.  Then run below command to export Parse Server URL - 
+               
+           #export SERVICE_HOST=$(kubectl get svc --namespace default my-release-parse --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}"):1337
+
+
+  5. Verify Parse Server Creation - 
+
+       a) To add data in Parse Server -
+          
+          #curl -X POST -H "X-Parse-Application-Id: myappID" -H "Content-Type: application/json" -d '{"score":1300,"playerName":"ATLAN","cheatMode":false}'   http://$SERVICE_HOST/parse/classes/GameScore
+       
+        Will recive this response -                      {"objectId":"bUgj3eRZDs","createdAt":"2019-10-12T02:40:13.862Z"}
+
+    
+       b) To Retrive added data -
+         
+          #curl -X GET -H "X-Parse-Application-Id: myappID" http://$SERVICE_HOST/parse/classes/GameScore
+          
+        Will receive this response -
+          {"results":[{"objectId":"bUgj3eRZDs","score":1300,"playerName":"ATLAN","cheatMode":false,"createdAt":"2019-10-12T02:40:13.862Z","updatedAt":"2019-10-12T02:40:13.862Z"}]}   
