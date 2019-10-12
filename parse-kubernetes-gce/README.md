@@ -102,4 +102,5 @@ Perquisites - Kubernetes Cluster , [Kompose on Host](https://github.com/kubernet
           #curl -X GET -H "X-Parse-Application-Id: myappID" http://$SERVICE_HOST/parse/classes/GameScore
           
         Will receive this response -
+        
           {"results":[{"objectId":"bUgj3eRZDs","score":1300,"playerName":"ATLAN","cheatMode":false,"createdAt":"2019-10-12T02:40:13.862Z","updatedAt":"2019-10-12T02:40:13.862Z"}]}   
