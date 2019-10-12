@@ -100,7 +100,8 @@ Perquisites - Kubernetes Cluster , [Kompose on Host](https://github.com/kubernet
           
           #curl -X POST -H "X-Parse-Application-Id: myappID" -H "Content-Type: application/json" -d '{"score":1300,"playerName":"ATLAN","cheatMode":false}'   http://$SERVICE_HOST/parse/classes/GameScore
        
-        Will recive this response -               
+        Will recive this response -       
+        
            {"objectId":"bUgj3eRZDs","createdAt":"2019-10-12T02:40:13.862Z"}
 
     
